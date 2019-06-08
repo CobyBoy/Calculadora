@@ -16,6 +16,7 @@
 
 		if (isNaN(lastValue()) && isNaN(numeros)) {
 			//reemplaza los símbolos de -,+,*,/ en caso de ser ingresados consecutivamente
+				controlDePantalla();
 			   contenido.textContent = contenido.textContent.substring(0, contenido.textContent.length - 1) + numeros; 
 		}       
 		
@@ -43,6 +44,10 @@
 		else if (contenido.textContent.length > 14|| resultado.textContent.length > 14) {
 			contenido.style.fontSize='25px';
 			resultado.style.fontSize='20px';
+		}
+
+		if (contenido.textContent.length == 20) {
+			contenido.textContent=contenido.textContent.substring(contenido.textContent.length - 1);
 		}
 		
 	}
