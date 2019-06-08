@@ -22,8 +22,8 @@
 		//sobreescribe el resultado luego de haber puesto ENTER o '=' para realizar nuevo operación
 
 		igualar ? (contenido.textContent = numeros, igualar = false): contenido.textContent += numeros;
-
 		escribeResultado();
+		controlDePantalla();
 	}
 
 	function sobreescribirCero(num) {
@@ -34,11 +34,22 @@
 			igualar = false;
 		}
 	}
+	//achica los números para no exceder el tamaño de pantalla
+	function controlDePantalla() {
+		if (contenido.textContent.length < 15 || resultado.textContent.length < 15) {
+			contenido.style.fontSize='35px';
+			resultado.style.fontSize='30px';
+		}
+		else if (contenido.textContent.length > 14|| resultado.textContent.length > 14) {
+			contenido.style.fontSize='25px';
+			resultado.style.fontSize='20px';
+		}
+	}
 
 	const escribeResultado = () => resultado.textContent = eval(contenido.textContent); //va mostrando el resultado mientras se ingresan números
 	
 	const resultadoAContenido = () => {/*pasa el resultado a la pantalla principal*/
-		contenido.textContent = resultado.textContent; resultado.textContent = contenido.textContent; igualar = true; }
+		contenido.textContent = resultado.textContent; resultado.textContent = ''; igualar = true; }
 
 	const lastValue = () => contenido.textContent.substring(contenido.textContent.length - 1); //devuelve el último ingresado. si el valor es 96, devuelve el 6 (String). para check si se ingresan 2 símbolos matem seguidos
 	
@@ -46,7 +57,7 @@
 	function borrarUltimo() {
 		contenido.textContent = contenido.textContent.substring(0,contenido.textContent.length - 1);
 		resultado.textContent = resultado.textContent.substring(0,resultado.textContent.length - 1);
-		
+		controlDePantalla();
 		if (contenido.textContent == '') {
 			contenido.textContent = '0';
 			resultado.textContent = '0';
