@@ -13,11 +13,10 @@
 
 	function operacion(numeros) {
 		sobreescribirCero(numeros);
-
+		
 		if (isNaN(lastValue()) && isNaN(numeros)) {
 			//reemplaza los símbolos de -,+,*,/ en caso de ser ingresados consecutivamente
-				controlDePantalla();
-			   contenido.textContent = contenido.textContent.substring(0, contenido.textContent.length - 1) + numeros; 
+			   contenido.textContent = contenido.textContent.substring(0, contenido.textContent.length - 1); 
 		}       
 		
 		//sobreescribe el resultado luego de haber puesto ENTER o '=' para realizar nuevo operación
