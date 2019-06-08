@@ -110,12 +110,12 @@ document.onkeydown = function (e){
 		e.keyCode === 103 || e.keyCode === 55 ? (sobreescribirCero(), operacion(String.fromCharCode(55))) :								/*7*/
 		e.keyCode === 104 || e.keyCode === 56 ? (sobreescribirCero(), operacion(String.fromCharCode(56))) :								/*8*/
 		e.keyCode === 105 || e.keyCode === 57 ? (sobreescribirCero(), operacion(String.fromCharCode(57))) :								/*9*/	
-		e.keyCode === 106 || e.keyCode === 42 ? (igualar = false, contenido.textContent += String.fromCharCode(42)) :					/* * */
-		e.keyCode === 107 || e.keyCode === 43 ? (igualar = false, contenido.textContent += String.fromCharCode(43)) :					/*+*/
-		e.keyCode === 109 || e.keyCode === 45 ? (igualar = false, contenido.textContent += String.fromCharCode(45)) :					/*-*/
-		e.keyCode === 110 || e.keyCode === 46 ? (igualar = false, contenido.textContent += String.fromCharCode(46)) :					/* . */
-		e.keyCode === 111 || e.keyCode === 47 ? (igualar = false, contenido.textContent += String.fromCharCode(47)) :					/* / */
-		e.keyCode === 106 || e.keyCode === 42 ? (igualar = false, contenido.textContent += String.fromCharCode(42)) :					/* */
+		e.keyCode === 106 || e.keyCode === 42 ? (igualar = false, operacion (String.fromCharCode(42))) :					/* * */
+		e.keyCode === 107 || e.keyCode === 43 ? (igualar = false, operacion (String.fromCharCode(43))) :					/*+*/
+		e.keyCode === 109 || e.keyCode === 45 ? (igualar = false, operacion (String.fromCharCode(45))):					/*-*/
+		e.keyCode === 110 || e.keyCode === 46 ? (igualar = false, operacion (String.fromCharCode(46))) :					/* . */
+		e.keyCode === 111 || e.keyCode === 47 ? (igualar = false, operacion ( String.fromCharCode(47))) :					/* / */
+		e.keyCode === 106 || e.keyCode === 42 ? (igualar = false, operacion (String.fromCharCode(42))) :					/* */
 		e.keyCode === 13 ? resultadoAContenido():																						/*ENTER*/
 		e.keyCode === 8 ? borrarUltimo(): void 0;																						/*backspace*/
 }
