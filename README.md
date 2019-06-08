@@ -1,0 +1,1 @@
+Calculadora simple hecha con HTML, CSS, Javascript. Se puede clickear en los teclas o usar el teclado. 
