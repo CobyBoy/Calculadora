@@ -44,6 +44,7 @@
 			contenido.style.fontSize='25px';
 			resultado.style.fontSize='20px';
 		}
+		
 	}
 
 	const escribeResultado = () => resultado.textContent = eval(contenido.textContent); //va mostrando el resultado mientras se ingresan números
